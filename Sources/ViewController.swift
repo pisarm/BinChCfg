@@ -7,13 +7,19 @@
 //
 
 import Cocoa
+import ORSSerial
 
-class ViewController: NSViewController {
+final class ViewController: NSViewController {
+    var viewModel: ViewModel = ViewModel()
+
+    @IBOutlet private weak var serialPortPopUpButton: NSPopUpButton!
+    @IBOutlet private weak var syncTimeButton: NSButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let manager = ORSSerialPortManager()
+        serialPortPopUpButton.addItems(withTitles: manager.availablePorts.map { $0.name })
     }
 
     override var representedObject: Any? {

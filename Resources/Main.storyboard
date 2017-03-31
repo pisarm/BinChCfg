@@ -74,10 +74,10 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="Select port and sync" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="243" y="570" width="480" height="130"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -93,13 +93,44 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="BinChCfg" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="61"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <popUpButton horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jni-hb-xku">
+                                <rect key="frame" x="22" y="17" width="333" height="26"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="5QZ-ca-A6y">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="QHB-JX-ZSu"/>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lBM-Ui-Hbb">
+                                <rect key="frame" x="362" y="13" width="100" height="32"/>
+                                <buttonCell key="cell" type="push" title="Sync time" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6ft-MW-3ih">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="jni-hb-xku" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="24" id="DCV-la-3NB"/>
+                            <constraint firstAttribute="bottom" secondItem="jni-hb-xku" secondAttribute="bottom" constant="20" id="EJU-xA-0yT"/>
+                            <constraint firstItem="lBM-Ui-Hbb" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="GO8-D7-u5A"/>
+                            <constraint firstItem="lBM-Ui-Hbb" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="XHu-cy-V7s"/>
+                            <constraint firstAttribute="bottom" secondItem="lBM-Ui-Hbb" secondAttribute="bottom" constant="20" id="jx7-JQ-2Gk"/>
+                            <constraint firstItem="jni-hb-xku" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="mcC-jU-iL7"/>
+                            <constraint firstAttribute="trailing" secondItem="lBM-Ui-Hbb" secondAttribute="trailing" constant="24" id="rIR-vS-U3Y"/>
+                            <constraint firstItem="lBM-Ui-Hbb" firstAttribute="leading" secondItem="jni-hb-xku" secondAttribute="trailing" constant="16" id="uE0-CM-M0G"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="serialPortPopUpButton" destination="jni-hb-xku" id="M8Y-XR-icc"/>
+                        <outlet property="syncTimeButton" destination="lBM-Ui-Hbb" id="gxy-iV-9K2"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="491.5"/>
         </scene>
     </scenes>
 </document>

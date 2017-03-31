@@ -21,6 +21,7 @@
 		E445DB071E8EF0B200520464 /* ORSSerial.framework.dSYM in Copy Files (dSym) */ = {isa = PBXBuildFile; fileRef = E445DB041E8EF0B200520464 /* ORSSerial.framework.dSYM */; };
 		E445DB081E8EF0B200520464 /* RxCocoa.framework.dSYM in Copy Files (dSym) */ = {isa = PBXBuildFile; fileRef = E445DB051E8EF0B200520464 /* RxCocoa.framework.dSYM */; };
 		E445DB091E8EF0B200520464 /* RxSwift.framework.dSYM in Copy Files (dSym) */ = {isa = PBXBuildFile; fileRef = E445DB061E8EF0B200520464 /* RxSwift.framework.dSYM */; };
+		E445DB0C1E8EFF5300520464 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E445DB0B1E8EFF5300520464 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		E445DB041E8EF0B200520464 /* ORSSerial.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ORSSerial.framework.dSYM; path = Carthage/Build/Mac/ORSSerial.framework.dSYM; sourceTree = "<group>"; };
 		E445DB051E8EF0B200520464 /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/Mac/RxCocoa.framework.dSYM; sourceTree = "<group>"; };
 		E445DB061E8EF0B200520464 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/Mac/RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		E445DB0B1E8EFF5300520464 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				E445DAF31E8EED9000520464 /* AppDelegate.swift */,
 				E445DAF41E8EED9000520464 /* ViewController.swift */,
+				E445DB0B1E8EFF5300520464 /* ViewModel.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E445DAF51E8EED9000520464 /* AppDelegate.swift in Sources */,
+				E445DB0C1E8EFF5300520464 /* ViewModel.swift in Sources */,
 				E445DAF61E8EED9000520464 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
