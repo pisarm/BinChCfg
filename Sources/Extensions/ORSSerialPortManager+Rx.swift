@@ -11,25 +11,12 @@ import RxSwift
 import ORSSerial
 
 extension Reactive where Base: ORSSerialPortManager {
-    func observable() -> Observable<ORSSerialPort> {
-        return Observable.create { observer -> Disposable in
-            self.base.availablePorts.forEach {
-                observer.onNext($0)
-            }
+    func availablePorts() -> Observable<[ORSSerialPort]> {
+        let connected = NotificationCenter.default.rx.notification(.ORSSerialPortsWereConnected)
+        let disconnected = NotificationCenter.default.rx.notification(.ORSSerialPortsWereDisconnected)
 
-            observer.on(.completed)
-            return Disposables.create()
-        }
+        return Observable.of(connected, disconnected)
+            .merge()
+            .map { _ in return self.base.availablePorts }
     }
 }
-/*
- 
- _ = NotificationCenter.default.rx.notification(.ORSSerialPortsWereConnected).subscribe { (event) in
-
- }
-
- _ = NotificationCenter.default.rx.notification(.ORSSerialPortsWereDisconnected).subscribe { (event) in
-
- }
-
- */
