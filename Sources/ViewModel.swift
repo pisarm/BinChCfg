@@ -12,5 +12,15 @@ import RxCocoa
 import RxSwift
 
 final class ViewModel {
+    public lazy var serialPortsObservable: Observable<[ORSSerialPort]> = self.serialPortsVariable.asObservable()
 
+    private let serialPortsVariable: Variable<[ORSSerialPort]> = Variable([])
+    private let disposeBag = DisposeBag()
+    private let serialPortManager: ORSSerialPortManager = ORSSerialPortManager()
+
+    public init() {
+        serialPortManager.rx.observable().subscribe(onNext: { [weak self] serialPort in
+            self?.serialPortsVariable.value.append(serialPort)
+        }).addDisposableTo(disposeBag)
+    }
 }

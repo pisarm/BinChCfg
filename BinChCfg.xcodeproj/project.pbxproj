@@ -22,6 +22,7 @@
 		E445DB081E8EF0B200520464 /* RxCocoa.framework.dSYM in Copy Files (dSym) */ = {isa = PBXBuildFile; fileRef = E445DB051E8EF0B200520464 /* RxCocoa.framework.dSYM */; };
 		E445DB091E8EF0B200520464 /* RxSwift.framework.dSYM in Copy Files (dSym) */ = {isa = PBXBuildFile; fileRef = E445DB061E8EF0B200520464 /* RxSwift.framework.dSYM */; };
 		E445DB0C1E8EFF5300520464 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E445DB0B1E8EFF5300520464 /* ViewModel.swift */; };
+		E4E7397F1E919655001FF583 /* ORSSerialPortManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7397E1E919655001FF583 /* ORSSerialPortManager+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		E445DB051E8EF0B200520464 /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/Mac/RxCocoa.framework.dSYM; sourceTree = "<group>"; };
 		E445DB061E8EF0B200520464 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/Mac/RxSwift.framework.dSYM; sourceTree = "<group>"; };
 		E445DB0B1E8EFF5300520464 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E4E7397E1E919655001FF583 /* ORSSerialPortManager+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ORSSerialPortManager+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		E445DAEA1E8EED4900520464 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E4E7397D1E919616001FF583 /* Extensions */,
 				E445DAF31E8EED9000520464 /* AppDelegate.swift */,
 				E445DAF41E8EED9000520464 /* ViewController.swift */,
 				E445DB0B1E8EFF5300520464 /* ViewModel.swift */,
@@ -171,6 +174,14 @@
 				E445DB061E8EF0B200520464 /* RxSwift.framework.dSYM */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4E7397D1E919616001FF583 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4E7397E1E919655001FF583 /* ORSSerialPortManager+Rx.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E445DAF51E8EED9000520464 /* AppDelegate.swift in Sources */,
+				E4E7397F1E919655001FF583 /* ORSSerialPortManager+Rx.swift in Sources */,
 				E445DB0C1E8EFF5300520464 /* ViewModel.swift in Sources */,
 				E445DAF61E8EED9000520464 /* ViewController.swift in Sources */,
 			);
