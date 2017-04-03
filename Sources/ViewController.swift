@@ -28,13 +28,5 @@ final class ViewController: NSViewController {
 
         }, onError: nil, onCompleted: nil, onDisposed: nil).addDisposableTo(disposeBag)
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
-
 }
 

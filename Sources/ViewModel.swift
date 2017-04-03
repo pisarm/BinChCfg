@@ -12,9 +12,18 @@ import RxCocoa
 import RxSwift
 
 final class ViewModel {
-    public var serialPortsObservable: Observable<[ORSSerialPort]> {
-        return self.serialPortManager.rx.availablePorts()
-    }
+    public lazy var serialPortsObservable: Observable<[ORSSerialPort]> = self.serialPortsVariable.asObservable()
+
+    private var serialPortsVariable: Variable<[ORSSerialPort]>
+    private let disposeBag = DisposeBag()
 
     private let serialPortManager: ORSSerialPortManager = ORSSerialPortManager()
+
+    init() {
+        self.serialPortsVariable = Variable(serialPortManager.availablePorts)
+
+        serialPortManager.rx.availablePorts()
+            .subscribe { self.serialPortsVariable.value = $0.element ?? [] }
+            .addDisposableTo(disposeBag)
+    }
 }
