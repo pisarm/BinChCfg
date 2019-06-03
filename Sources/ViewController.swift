@@ -22,11 +22,11 @@ final class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.serialPortsObservable.subscribe(onNext: { serialPorts in
-            self.serialPortPopUpButton.removeAllItems()
-            serialPorts.forEach { self.serialPortPopUpButton.addItem(withTitle: $0.name) }
-
-        }, onError: nil, onCompleted: nil, onDisposed: nil).addDisposableTo(disposeBag)
+//        viewModel.serialPortsObservable.subscribe(onNext: { serialPorts in
+//            self.serialPortPopUpButton.removeAllItems()
+//            serialPorts.forEach { self.serialPortPopUpButton.addItem(withTitle: $0.name) }
+//
+//        }, onError: nil, onCompleted: nil, onDisposed: nil).addDisposableTo(disposeBag)
     }
 }
 
